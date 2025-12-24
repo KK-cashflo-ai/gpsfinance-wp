@@ -1,0 +1,47 @@
+# ------------------------------
+# WordPress Core (never commit)
+# ------------------------------
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/xmlrpc.php
+
+# ------------------------------
+# Environment & Secrets
+# ------------------------------
+/wp-config.php
+/.env
+.env.*
+
+# ------------------------------
+# Uploads & Cache
+# ------------------------------
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/upgrade/
+
+# ------------------------------
+# Logs
+# ------------------------------
+*.log
+/debug.log
+
+# ------------------------------
+# OS / Editor junk
+# ------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ------------------------------
+# Node / Build artifacts (future-proof)
+# ------------------------------
+node_modules/
+dist/
+
+# ------------------------------
+# FTP / Hosting artifacts
+# ------------------------------
+*.zip
+*.tar.gz
