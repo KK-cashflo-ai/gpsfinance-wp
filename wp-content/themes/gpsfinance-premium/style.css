@@ -1,0 +1,153 @@
+/*
+Theme Name: GPS Finance Premium
+Author: Auto-migrated
+Version: 1.0
+Text Domain: gpsfinance
+*/
+
+/* Only affect WP blog contexts */
+body.blog,
+body.single-post,
+body.archive,
+body.category,
+body.tag,
+body.search,
+body.author {
+
+  /* If /assets/theme.css isn't loading, at least this prevents "blank white" feel */
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #050b1f;
+  color: #e8eefc;
+}
+
+/* Containers (match your main theme rhythm) */
+body.blog .container,
+body.single-post .container,
+body.archive .container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.gp-blog-main { min-height: 60vh; }
+
+/* Blog hero */
+.gp-blog-hero { padding: 42px 0 10px; }
+.gp-blog-title { font-size: 44px; line-height: 1.05; margin: 0 0 10px; }
+.gp-blog-subtitle { max-width: 780px; opacity: 0.85; margin: 0 0 14px; }
+
+/* Post grid */
+.gp-blog-list { padding: 18px 0 64px; }
+.gp-post-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 980px) {
+  .gp-post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .gp-blog-title { font-size: 34px; }
+  .gp-post-grid { grid-template-columns: 1fr; }
+}
+
+/* Post card */
+.gp-post-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.gp-post-link { display: block; text-decoration: none; color: inherit; }
+.gp-post-thumb img { width: 100%; height: auto; display: block; }
+.gp-post-body { padding: 16px 16px 18px; }
+.gp-post-meta { font-size: 13px; opacity: 0.75; margin-bottom: 10px; }
+.gp-dot { margin: 0 8px; opacity: 0.7; }
+.gp-post-h { font-size: 18px; line-height: 1.25; margin: 0 0 10px; }
+.gp-post-excerpt { margin: 0 0 12px; opacity: 0.9; }
+.gp-post-cta { font-weight: 600; opacity: 0.95; }
+
+/* Single post */
+.gp-single { padding: 28px 0 72px; }
+.gp-article { max-width: 860px; margin: 0 auto; }
+.gp-article-title { font-size: 44px; line-height: 1.08; margin: 0 0 10px; }
+@media (max-width: 640px) { .gp-article-title { font-size: 34px; } }
+.gp-article-meta { font-size: 13px; opacity: 0.75; margin-bottom: 16px; }
+.gp-article-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.gp-article-content { margin-top: 18px; }
+
+/* WordPress content normalization (AI-friendly readability) */
+.gp-article-content p { line-height: 1.8; margin: 0 0 16px; }
+.gp-article-content h2 { font-size: 28px; margin: 34px 0 12px; }
+.gp-article-content h3 { font-size: 20px; margin: 22px 0 10px; }
+.gp-article-content ul,
+.gp-article-content ol { padding-left: 20px; margin: 0 0 16px; }
+.gp-article-content li { margin: 6px 0; }
+.gp-article-content a { text-decoration: underline; }
+
+/* Pagination */
+.gp-pagination { margin-top: 22px; }
+.gp-pagination .page-numbers {
+  display: inline-block;
+  padding: 8px 12px;
+  margin-right: 6px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  text-decoration: none;
+}
+/* --- WP style neutralisation for blog pages --- */
+body.blog, body.single-post, body.archive, body.error404 {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+
+/* Kill WP constrained content widths that create odd alignment */
+body.blog .wp-site-blocks,
+body.single-post .wp-site-blocks,
+body.archive .wp-site-blocks,
+body.error404 .wp-site-blocks {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove Hello Elementor default spacing wrappers */
+body.blog #content.site-main,
+body.single-post #content.site-main,
+body.archive #content.site-main,
+body.error404 #content.site-main {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* --- Force desktop layout on desktop screens --- */
+@media (min-width: 980px) {
+  .mobile-menu-toggle { display: none !important; }
+  .main-nav { display: flex !important; gap: 18px !important; }
+  .header-content { display: flex !important; justify-content: space-between !important; align-items: center !important; }
+
+  .footer-content { display: grid !important; grid-template-columns: 1.2fr 1.8fr !important; gap: 28px !important; }
+  .footer-links { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 18px !important; }
+}
+
+/* Hard guarantee: match main theme background on blog pages */
+body.blog, body.single-post, body.archive, body.error404 {
+  background: linear-gradient(135deg, #0a0f1e 0%, #101a33 100%) !important;
+  color: #e8eefc !important;
+}
+
+/* Force desktop nav on desktop */
+@media (min-width: 980px) {
+  .mobile-menu-toggle { display: none !important; }
+  .main-nav { display: flex !important; align-items: center !important; gap: 18px !important; }
+}
+
